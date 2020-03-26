@@ -4,7 +4,7 @@ namespace tests\util;
 
 
 use tests\TestCase;
-use alibaba\nacos\util\EncodeUtil;
+use phpNacos\util\EncodeUtil;
 
 /**
  * Class EncodeTest

@@ -9,7 +9,7 @@ use Exception;
 /**
  * Class RequestVerbRequiredException
  * @author JasonLee
- * @package alibaba\nacos\exception
+ * @package phpNacos\exception
  */
 class RequestVerbRequiredException extends Exception
 {

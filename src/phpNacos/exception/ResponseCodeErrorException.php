@@ -7,7 +7,7 @@ use Exception;
 /**
  * Class ResponseCodeErrorException
  * @author JasonLee
- * @package alibaba\nacos\exception
+ * @package phpNacos\exception
  */
 class ResponseCodeErrorException extends Exception
 {

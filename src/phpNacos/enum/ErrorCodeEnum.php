@@ -7,7 +7,7 @@ namespace phpNacos\enum;
 /**
  * Class ErrorCodeEnum
  * @author JasonLee
- * @package alibaba\nacos\enum
+ * @package phpNacos\enum
  */
 class ErrorCodeEnum
 {

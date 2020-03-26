@@ -5,7 +5,7 @@ namespace tests\util;
 
 use Exception;
 use tests\TestCase;
-use alibaba\nacos\util\LogUtil;
+use phpNacos\util\LogUtil;
 
 /**
  * Class LogUtilTest

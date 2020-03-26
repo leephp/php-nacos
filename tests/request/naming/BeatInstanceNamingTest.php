@@ -4,10 +4,10 @@ namespace tests\request\naming;
 
 use tests\TestCase;
 use ReflectionException;
-use alibaba\nacos\request\naming\BeatInstanceNaming;
-use alibaba\nacos\exception\ResponseCodeErrorException;
-use alibaba\nacos\exception\RequestUriRequiredException;
-use alibaba\nacos\exception\RequestVerbRequiredException;
+use phpNacos\request\naming\BeatInstanceNaming;
+use phpNacos\exception\ResponseCodeErrorException;
+use phpNacos\exception\RequestUriRequiredException;
+use phpNacos\exception\RequestVerbRequiredException;
 
 class BeatInstanceNamingTest extends TestCase
 {

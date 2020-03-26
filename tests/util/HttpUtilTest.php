@@ -3,7 +3,7 @@
 namespace tests\util;
 
 use tests\TestCase;
-use alibaba\nacos\util\HttpUtil;
+use phpNacos\util\HttpUtil;
 
 /**
  * Class HttpUtilTest

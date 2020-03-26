@@ -4,8 +4,8 @@
 namespace phpNacos\failover;
 
 
-use alibaba\nacos\NacosConfig;
-use alibaba\nacos\util\FileUtil;
+use phpNacos\NacosConfig;
+use phpNacos\util\FileUtil;
 
 class Processor
 {

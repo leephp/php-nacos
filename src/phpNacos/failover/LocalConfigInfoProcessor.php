@@ -10,7 +10,7 @@ use phpNacos\NacosConfig;
 /**
  * Class LocalConfigInfoProcessor
  * @author JasonLee
- * @package alibaba\nacos\failover
+ * @package phpNacos\failover
  */
 class LocalConfigInfoProcessor extends Processor
 {

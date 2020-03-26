@@ -4,10 +4,10 @@ namespace tests\request;
 
 use tests\TestCase;
 use ReflectionException;
-use alibaba\nacos\request\config\GetConfigRequest;
-use alibaba\nacos\exception\ResponseCodeErrorException;
-use alibaba\nacos\exception\RequestUriRequiredException;
-use alibaba\nacos\exception\RequestVerbRequiredException;
+use phpNacos\request\config\GetConfigRequest;
+use phpNacos\exception\ResponseCodeErrorException;
+use phpNacos\exception\RequestUriRequiredException;
+use phpNacos\exception\RequestVerbRequiredException;
 
 /**
  * Class GetConfigRequestTest

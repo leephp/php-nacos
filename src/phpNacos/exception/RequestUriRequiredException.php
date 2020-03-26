@@ -9,7 +9,7 @@ use Exception;
 /**
  * Class RequestUriRequiredException
  * @author JasonLee
- * @package alibaba\nacos\exception
+ * @package phpNacos\exception
  */
 class RequestUriRequiredException extends Exception
 {

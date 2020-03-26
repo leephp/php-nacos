@@ -4,10 +4,10 @@ namespace tests\request\naming;
 
 use tests\TestCase;
 use ReflectionException;
-use alibaba\nacos\exception\ResponseCodeErrorException;
-use alibaba\nacos\exception\RequestUriRequiredException;
-use alibaba\nacos\request\naming\RegisterInstanceNaming;
-use alibaba\nacos\exception\RequestVerbRequiredException;
+use phpNacos\exception\ResponseCodeErrorException;
+use phpNacos\exception\RequestUriRequiredException;
+use phpNacos\request\naming\RegisterInstanceNaming;
+use phpNacos\exception\RequestVerbRequiredException;
 
 class RegisterInstanceNamingTest extends TestCase
 {
