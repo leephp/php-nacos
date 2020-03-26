@@ -1,6 +1,8 @@
 {
     "name": "leephp/php-nacos",
     "description": "php-nacos-sdk",
+    "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "李坚",
