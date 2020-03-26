@@ -1,0 +1,30 @@
+{
+    "name": "leephp/phpNacos",
+    "description": "php-nacos-sdk",
+    "authors": [
+        {
+            "name": "李坚",
+            "email": "lijian2018@people.cn"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "monolog/monolog": "^1.24|^2.0",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "phpNacos\\": "src/phpNacos/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
