@@ -22,7 +22,7 @@
 ## composer安装
 
 ``` bash
-composer require leephp/nacos
+composer require leephp/php-nacos
 ```
 
 ## 使用crontab拉取配置文件
