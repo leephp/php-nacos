@@ -30,7 +30,7 @@ composer require leephp/php-nacos
 定时1分钟拉取一次
 
 ```bash
-*/1 */1 * * * php path/to/cron.php
+*/1 * * * * php path/to/cron.php
 ```
 
 ```php
