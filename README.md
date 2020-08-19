@@ -6,7 +6,8 @@
 
 1. 容错兜底
 2. 容易上手
-3. 技术支持，有问题可加作者微信: suxiaolinKing
+3. 技术支持，有问题可加作者微信: 78236656
+4. 原版地址 https://github.com/neatlife/php-nacos 为了使用方便, 复制了一份, 修改了部分缺失代码, 版权依然归原作者
 
 ### 开发计划
 
@@ -21,7 +22,7 @@
 ## composer安装
 
 ``` bash
-composer require alibaba/nacos
+composer require leephp/php-nacos
 ```
 
 ## 使用crontab拉取配置文件
