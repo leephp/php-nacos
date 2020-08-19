@@ -171,7 +171,7 @@ class Naming
             NamingConfig::getPort(),
             $healthyOnly,
             $weight,
-            $namespaceId,
+            !$namespaceId ? NamingConfig::getNamespaceId(): $namespaceId,
             $clusters
         );
     }
