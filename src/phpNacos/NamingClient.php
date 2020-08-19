@@ -45,7 +45,7 @@ class NamingClient
      * @throws RequestVerbRequiredException
      * @throws ResponseCodeErrorException
      */
-    public static function register($serviceName, $ip, $port, $weight = "", $namespaceId = "", $enable = true, $healthy = true, $clusterName = "", $metadata = "{}")
+    public static function register($serviceName, $ip, $port, $weight = "", $namespaceId = "", $enable = 'true', $healthy = 'true', $clusterName = "", $metadata = "{}")
     {
         $registerInstanceDiscovery = new RegisterInstanceNaming();
         $registerInstanceDiscovery->setServiceName($serviceName);

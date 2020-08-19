@@ -46,7 +46,7 @@ class NamingConfig extends NacosConfig
     /**
      * 示注册的实例是临时实例还是持久化实例, true临时，false持久化
      */
-    private static $ephemeral = true;
+    private static $ephemeral = 'false';
 
     /**
      * @return mixed

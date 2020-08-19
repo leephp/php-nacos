@@ -21,7 +21,7 @@ class Naming
      * @param string $weight
      * @return Naming
      */
-    public static function init($serviceName, $ip, $port, $namespaceId = "", $weight = "", $ephemeral = true)
+    public static function init($serviceName, $ip, $port, $namespaceId = "", $weight = "", $ephemeral = 'false')
     {
         static $client;
         if ($client == null) {
@@ -48,7 +48,7 @@ class Naming
      * @throws exception\RequestVerbRequiredException
      * @throws exception\ResponseCodeErrorException
      */
-    public function register($enable = true, $healthy = true, $clusterName = "", $metadata = "{}")
+    public function register($enable = 'true', $healthy = 'true', $clusterName = "", $metadata = "{}")
     {
         return NamingClient::register(
             NamingConfig::getServiceName(),
