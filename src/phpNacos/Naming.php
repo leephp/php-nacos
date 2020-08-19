@@ -21,7 +21,7 @@ class Naming
      * @param string $weight
      * @return Naming
      */
-    public static function init($serviceName, $ip, $port, $namespaceId = "", $weight = "", $ephemeral = 'true')
+    public static function init($serviceName, $ip, $port, $namespaceId = "", $weight = "", $ephemeral = 'false')
     {
         static $client;
         if ($client == null) {
