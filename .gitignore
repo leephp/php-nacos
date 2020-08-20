@@ -1,4 +1,4 @@
 /vendor/
 composer.lock
-demo.php
+demo*.php
 .idea
