@@ -21,10 +21,11 @@ class Naming
      * @param string $weight
      * @return Naming
      */
-    public static function init($serviceName, $ip, $port, $namespaceId = "", $weight = "", $ephemeral = 'false')
+    public static function init($serviceName, $ip, $port, $namespaceId = "", $weight = "", $ephemeral = false)
     {
         static $client;
         if ($client == null) {
+            $ephemeral = !!$ephemeral ? 'true' : 'false';
             NamingConfig::setServiceName($serviceName);
             NamingConfig::setIp($ip);
             NamingConfig::setPort($port);
@@ -48,7 +49,7 @@ class Naming
      * @throws exception\RequestVerbRequiredException
      * @throws exception\ResponseCodeErrorException
      */
-    public function register($enable = 'true', $healthy = 'true', $clusterName = "", $metadata = "{}")
+    public function register($enable = true, $healthy = true, $clusterName = "", $metadata = "{}")
     {
         return NamingClient::register(
             NamingConfig::getServiceName(),
@@ -56,8 +57,8 @@ class Naming
             NamingConfig::getPort(),
             NamingConfig::getWeight(),
             NamingConfig::getNamespaceId(),
-            $enable,
-            $healthy,
+            !!$enable ? 'true' : 'false',
+            !!$healthy ? 'true' : 'false',
             $clusterName,
             $metadata
         );
@@ -124,7 +125,7 @@ class Naming
     {
         return NamingClient::listInstances(
             NamingConfig::getServiceName(),
-            $healthyOnly,
+            !!$healthyOnly ? 'true' : 'false',
             $namespaceId,
             $clusters
         );
@@ -148,7 +149,8 @@ class Naming
         ]);
         return NamingClient::beat(
             NamingConfig::getServiceName(),
-            $instance->encode()
+            $instance->encode(),
+            NamingConfig::getNamespaceId()
         );
     }
 

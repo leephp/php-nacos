@@ -22,6 +22,12 @@ class BeatInstanceNaming extends NamingRequest
     private $beat;
 
     /**
+     * 实时心跳namespaceId
+     * @var
+     */
+    private $namespaceId;
+
+    /**
      * @return mixed
      */
     public function getServiceName()
@@ -35,6 +41,22 @@ class BeatInstanceNaming extends NamingRequest
     public function setServiceName($serviceName)
     {
         $this->serviceName = $serviceName;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNamespaceId()
+    {
+        return $this->namespaceId;
+    }
+
+    /**
+     * @param $namespaceId
+     */
+    public function setNamespaceId($namespaceId)
+    {
+        $this->namespaceId = $namespaceId;
     }
 
     /**

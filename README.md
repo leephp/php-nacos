@@ -19,6 +19,56 @@
 - [ ] ThinkPHP框架集成
 - [ ] Symfony框架集成
 
+## Laravel框架集成
+
+
+
+config/nacos.php 
+
+```php
+<?php
+return [
+    // nacos配置中心
+    'LARAVEL_ENV' => 'dev',
+    'LARAVEL_NACOS_SERVER_ADDR' => 'http://127.0.0.1:8848/',
+    'LARAVEL_NACOS_SERVER_NAME' => 'demo-laravel-nacos',
+    'LARAVEL_NACOS_IPADDRESS' => '10.10.10.20',
+    'LARAVEL_NACOS_PORT' => 8080,
+    'LARAVEL_NACOS_DATAID' => 'demo-laravel-nacos.env',
+    'LARAVEL_NACOS_GROUPID' => 'DEFAULT_GROUP',
+    'LARAVEL_NACOS_NAMESPACEID' => 'public',
+];
+```
+bootstrap/app.php 
+
+```php
+$nacosConfig = require_once(dirname(__DIR__) . '/config/nacos.php'); 
+\phpNacos\NacosConfig::setSnapshotPath(dirname(__DIR__) . "/nacos/config"); 
+(new \Dotenv\Loader([], new \Dotenv\Environment\DotenvFactory(), true))->loadDirect( 
+    \phpNacos\failover\LocalConfigInfoProcessor::getSnapshot( 
+        $nacosConfig['LARAVEL_ENV'] ?? 'local', 
+        $nacosConfig['LARAVEL_NACOS_DATAID'] ?? 'default.env', 
+        $nacosConfig['LARAVEL_NACOS_GROUPID'] ?? 'DEFAULT_GROUP', 
+        $nacosConfig['LARAVEL_NACOS_NAMESPACEID'] ?? 'public' 
+    ) 
+); 
+```
+app/Console/Command/Nacos.php 
+
+```php
+(new \Dotenv\Loader([], new \Dotenv\Environment\DotenvFactory(), true))->loadDirect( 
+\phpNacos\Nacos::init( 
+config("nacos.LARAVEL_NACOS_SERVER_ADDR"), 
+config("nacos.LARAVEL_ENV"), 
+config("nacos.LARAVEL_NACOS_DATAID"), 
+config("nacos.LARAVEL_NACOS_GROUPID"), 
+config("nacos.LARAVEL_NACOS_NAMESPACEID") ? : "" 
+)->runOnce() 
+); 
+echo "Load Config Success!!!\n"; 
+```
+
+
 ## composer安装
 
 ``` bash
